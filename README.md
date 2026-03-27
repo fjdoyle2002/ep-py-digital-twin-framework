@@ -18,8 +18,7 @@ The framework is designed to be building-agnostic. Configuration is driven entir
 
 If you use this framework in your research, please cite:
 
-> Doyle, F.J., et al. (2026). A ZEN Framework for Building Energy Digital Twins. *Energy and Buildings*, Virtual Special Issue: Progress in Smart Technologies for Built Environment. *(in press)*
-
+> Doyle, F.J., et al. (2026). A ZEN Framework for Building Energy Digital Twins. *paper in review*
 ## Prerequisites
 
 - **EnergyPlus** >= 23.2.0 ([energyplus.net](https://energyplus.net))
