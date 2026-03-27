@@ -205,3 +205,25 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Local configuration with credentials
+config.ini
+
+# EnergyPlus output directory
+out/
+
+# Log files
+*.log
+logs/
+
+# Proprietary building model
+dt_in.idf
+in.idf
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Zip archives
+*.zip

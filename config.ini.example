@@ -1,0 +1,59 @@
+# ep-py-digital-twin-framework -- Example Configuration File
+# Copy this file to config.ini and fill in your environment-specific values.
+# IMPORTANT: config.ini is excluded from version control by .gitignore.
+#            Never commit a config.ini containing real credentials.
+
+[DEFAULT]
+DigitalTwinIdentifier = dt1
+WarmUpPeriodInDays = 0
+RunLength = 365
+TimeZone = EST
+PersistenceType = SQL
+DefaultToEPW = true
+bldg_latitude = 0.0
+bldg_longitude = 0.0
+bldg_altitude = 0
+bldg_tz = America/New_York
+
+[CONFIGURATIONFILES]
+SignalsFile = signals.csv
+SensorsFile = sensors.csv
+ActuatorsFile = actuators.csv
+CustomFile = custom.csv
+OpcDevicesFile = opc_devices.csv
+OpcVariablesFile = opc_variables.csv
+
+[ENERGYPLUS]
+EnergyPlusDirectory = C:\EnergyPlusV23-2-0
+EPWeatherFile = C:\path\to\your\weather.epw
+EPBuildingModel = C:\path\to\your\building.idf
+
+[Seeq]
+SeeqServerURL = https://your-seeq-server.example.com
+SeeqUser = your_seeq_username@example.com
+# NEVER put your real password here in a file committed to version control
+SeeqPassword = YOUR_SEEQ_PASSWORD_HERE
+SeeqRequestOrigin = digital twin
+
+[DATABASE]
+DatabaseType = postgresql
+DatabaseHost = localhost
+DatabasePort = 5432
+DatabaseUser = postgres
+# NEVER put your real password here in a file committed to version control
+DatabasePass = YOUR_DB_PASSWORD_HERE
+DatabaseName = your_database_name
+# Set to TRUE to update missing units from .rdd file after simulation warmup
+# WARNING: Requires database write access
+# Recommended: Set to TRUE once, then FALSE for production runs
+UPDATE_SIGNAL_UNITS = TRUE
+
+[OPCSERVER]
+OpcServerEnabled = True
+OpcServerName = dt1
+OpcServerUrl = your.opc.server.url
+ep = opc.tcp://127.0.0.1:4840/opcua/
+uri = http://your.institution.edu/opcuadt/
+
+[CSVOUT]
+CSVFilename =
